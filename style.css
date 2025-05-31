@@ -1,0 +1,244 @@
+body {
+    user-select: none; /* Evita seleção de texto no body */
+    margin: 0;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    font-family: "Pixelify Sans", sans-serif;
+    color: #FE4494;
+    font-style: normal;
+    cursor: url('./cursor/cursor.png'), auto;
+    background: url('./images/layout/pastelsky.gif') no-repeat center center;
+    background-size: cover;
+}
+
+
+.texto {
+    font-size: 12px;
+    margin-bottom: 20px;
+    text-align: center;
+    -webkit-app-region: no-drag; /* Garantir que textos não arrastem a janela */
+    user-select: none; /* Impede seleção indesejada */
+}
+
+.texto h2 {
+    font-size: 23px;
+    text-align: center;
+}
+
+#container-jogo {
+    position: relative;
+    width: 370px;
+    height: 400px;
+
+    background-image: url('./images/layout/fundodressup.png');
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    -webkit-app-region: drag;
+    user-select: none; /* Impede seleção na área arrastável */
+}
+
+
+
+
+
+
+.interfacenova {
+    position: absolute;
+    top: 220px;
+    left: 185px;
+    transform: translate(-50%, -50%);
+    width: 338px;
+}
+
+
+
+#blusaroupa {
+    position: absolute;
+    top: 49.5%;
+    left: 50%;
+    transform: translate(-152%, -50%) translateY(80px); 
+    /* Ajusta Y para botões ficarem abaixo da interfacenova, por exemplo */
+    width: 73px;
+    height: auto;
+    cursor: pointer;
+}
+
+
+
+#calcaroupa {
+    position: absolute;
+    top: 49.5%;
+    left: 50%;
+    transform: translate(-52%, -50%) translateY(80px); 
+    /* Ajusta Y para botões ficarem abaixo da interfacenova, por exemplo */
+    
+    width: 73px;
+    height: auto;
+    cursor: pointer;
+}
+
+
+
+
+#chapeuroupa {
+    position: absolute;
+    top: 49.5%;
+    left: 50%;
+    transform: translate(46%, -50%) translateY(80px); 
+    /* Ajusta Y para botões ficarem abaixo da interfacenova, por exemplo */
+    
+    width: 73px;
+    height: auto;
+    cursor: pointer;
+}
+
+
+
+#personagem img {
+    display: none; /* Oculta todas as roupas inicialmente */
+}
+
+#personagem img[src] {
+    display: block; /* Mostra só quando tiver src válido */
+}
+
+
+#personagem-blusa {
+  position: absolute;
+  width: 120px;
+  height: 110px;
+  top: 140px;
+  left: 125px;
+  z-index: 2; /* maior que o base para ficar por cima */
+
+
+}
+
+#personagem-calca{
+  position: absolute;
+  width: 250px;
+  height: 230px;
+  top: 43px;
+  left: 60px;
+  z-index: 1;
+}
+
+#personagem-acessorios{
+  position: absolute;
+  width: 200px;
+  height: 110px;
+  top: 90px;
+  left: 40px;
+  z-index: 3;
+}
+
+#blusaroupa {
+  cursor: url('./cursor/cursorhover.png'), pointer;
+}
+
+#calcaroupa {
+  cursor: url('./cursor/cursorhover.png'), pointer;
+}
+
+#chapeuroupa {
+  cursor: url('./cursor/cursorhover.png'), pointer;
+}
+
+#opcoes-itens {
+  position: absolute;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 71%; /* espaço entre menu e opções */
+  z-index: 2;
+  width: 75px;
+  height: 75px;
+
+}
+
+#opcoes-itens img{
+    cursor: url('./cursor/cursorhover.png'), pointer;
+
+}
+
+
+
+#opcoes-itens img:hover {
+  transform: scale(0.9); /* aumenta um pouco ao passar o mouse */
+}
+
+
+
+
+.selecionado {
+  opacity: 0.5; /* ou outro valor: 0.7, 0.3... */
+  transition: opacity 0.3s ease;
+}
+
+
+
+
+
+.opcao-img {
+  width: 80px;       /* largura das imagens de opção */
+  height: auto;      /* altura automática (ou defina fixa, se quiser) */
+  margin: 5px;
+  margin-top: 25px;      /* espaço entre as imagens */
+  cursor: pointer;   /* cursor de mão ao passar por cima */
+  transition: transform 0.2s; /* animação suave se quiser */
+}
+
+.opcao-img:hover {
+  transform: scale(1.05); /* leve aumento quando passar o mouse */
+}
+
+
+#start-btn {
+  position: absolute;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    top: 200px;
+    left: 135px;
+    border: none;
+    background-color: #ffaed1;
+    color: white;
+    border-radius: 8px;
+    border: 2px solid #ff8bbd;
+    cursor: url('./cursor/cursorhover.png'), pointer;
+    font-family: "Pixelify Sans", sans-serif;
+}
+
+
+
+
+
+
+
+#personagem-acessorios {
+    position: absolute;
+    top: 55px;
+    left: 150px;
+}
+
+#personagem-acessorios img {
+    position: absolute; 
+    width: 70px;
+    /* ajuste conforme o tamanho e posição de cada acessório */
+}
+
+
+
