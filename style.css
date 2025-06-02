@@ -17,18 +17,6 @@ body {
 }
 
 
-.texto {
-    font-size: 12px;
-    margin-bottom: 20px;
-    text-align: center;
-    -webkit-app-region: no-drag; /* Garantir que textos não arrastem a janela */
-    user-select: none; /* Impede seleção indesejada */
-}
-
-.texto h2 {
-    font-size: 23px;
-    text-align: center;
-}
 
 #container-jogo {
     position: relative;
@@ -206,21 +194,6 @@ body {
 }
 
 
-#start-btn {
-  position: absolute;
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 18px;
-    top: 200px;
-    left: 135px;
-    border: none;
-    background-color: #ffaed1;
-    color: white;
-    border-radius: 8px;
-    border: 2px solid #ff8bbd;
-    cursor: url('./cursor/cursorhover.png'), pointer;
-    font-family: "Pixelify Sans", sans-serif;
-}
 
 
 
