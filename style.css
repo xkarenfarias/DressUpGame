@@ -17,25 +17,13 @@ body {
 }
 
 
-.texto {
-    font-size: 12px;
-    margin-bottom: 20px;
-    text-align: center;
-    -webkit-app-region: no-drag; /* Garantir que textos não arrastem a janela */
-    user-select: none; /* Impede seleção indesejada */
-}
-
-.texto h2 {
-    font-size: 23px;
-    text-align: center;
-}
 
 #container-jogo {
     position: relative;
     width: 370px;
     height: 400px;
 
-    background-image: url('./images/layout/fundodressup.png');
+    background-image: url('./images/layout/fundobased.png');
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center;
@@ -59,7 +47,7 @@ body {
     top: 220px;
     left: 185px;
     transform: translate(-50%, -50%);
-    width: 338px;
+    width: 346px;
 }
 
 
@@ -144,19 +132,18 @@ body {
   z-index: 3;
 }
 
-#blusaroupa {
-  cursor: url('./cursor/cursorhover.png'), pointer;
-}
 
-#calcaroupa {
-  cursor: url('./cursor/cursorhover.png'), pointer;
-}
-
+#blusaroupa,
+#calcaroupa,
 #chapeuroupa {
+  -webkit-app-region: no-drag;
   cursor: url('./cursor/cursorhover.png'), pointer;
 }
+
 
 #opcoes-itens {
+  -webkit-app-region: no-drag;
+
   position: absolute;
   display: flex;
   gap: 20px;
@@ -170,7 +157,10 @@ body {
 }
 
 #opcoes-itens img{
+  -webkit-app-region: no-drag;
+
     cursor: url('./cursor/cursorhover.png'), pointer;
+    
 
 }
 
@@ -193,6 +183,8 @@ body {
 
 
 .opcao-img {
+  -webkit-app-region: no-drag;
+
   width: 80px;       /* largura das imagens de opção */
   height: auto;      /* altura automática (ou defina fixa, se quiser) */
   margin: 5px;
@@ -204,28 +196,6 @@ body {
 .opcao-img:hover {
   transform: scale(1.05); /* leve aumento quando passar o mouse */
 }
-
-
-#start-btn {
-  position: absolute;
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 18px;
-    top: 200px;
-    left: 135px;
-    border: none;
-    background-color: #ffaed1;
-    color: white;
-    border-radius: 8px;
-    border: 2px solid #ff8bbd;
-    cursor: url('./cursor/cursorhover.png'), pointer;
-    font-family: "Pixelify Sans", sans-serif;
-}
-
-
-
-
-
 
 
 #personagem-acessorios {
@@ -241,4 +211,32 @@ body {
 }
 
 
+.janela-controles {
+    -webkit-app-region: no-drag;
+    user-select: none;
+    position: absolute;
+    top: 25px; /* ou 8px */
+    right: 10px; /* ou 8px */
+    display: flex;
+    gap: 10px; /* espaçamento entre os botões */
+}
 
+.janela-controles img {
+    width: 25px; /* Ajuste o tamanho conforme sua imagem */
+    height: 25px;
+    cursor: url('./cursor/cursorhover.png'), pointer;
+    user-select: none;
+}
+
+#fechar:hover,
+#minimizar:hover,
+#maximizar:hover {
+    transform: scale(0.9);
+}
+
+
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+  
+}

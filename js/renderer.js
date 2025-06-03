@@ -1,3 +1,29 @@
+const { ipcRenderer } = require('electron');
+
+document.addEventListener('DOMContentLoaded', () => {
+const btnFechar = document.getElementById('fechar');
+    if (btnFechar) {
+        btnFechar.addEventListener('click', () => {
+            ipcRenderer.send('fechar-janela');
+        });
+    }
+
+    const btnMinimizar = document.getElementById('minimizar');
+    if (btnMinimizar) {
+        btnMinimizar.addEventListener('click', () => {
+            ipcRenderer.send('minimizar-janela');
+        });
+    }
+
+    const btnMaximizar = document.getElementById('maximizar');
+    if (btnMaximizar) {
+        btnMaximizar.addEventListener('click', () => {
+            ipcRenderer.send('maximizar-janela');
+        });
+    }
+
+
+
 const personagem = {
   blusa: '',
   calca: '',
@@ -116,3 +142,5 @@ document.getElementById('chapeuroupa').addEventListener('click', () => seleciona
 
 // inicializa mostrando as opções da categoria padrão
 selecionarCategoria(categoriaAtual);
+
+})

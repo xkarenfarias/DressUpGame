@@ -4,24 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DressUp Sulka (>_<)</title>
+    <title>DressUp Sulka (>_<) </title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+                rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
+            <link rel="stylesheet" href="style.css">
 
-    <link rel="icon" href="./images/icon/cakerosa.ico" type="image/ico" />
+            <link rel="icon" href="./images/icon/cakerosa.ico" type="image/ico" />
 </head>
 
 <body>
     <header>
-        <div id="container-jogo" >
-            <div id="tela-inicial">
-                <h1 class="texto">Bem-vindo ao DressUp Sulka!</h1>
-                <button id="start-btn">start</button>
+        <div id="container-jogo">
+
+            <div class="janela-controles">
+                <img src="./images/layout/minimizar.png" id="minimizar" alt="Minimizar">
+                <img src="./images/layout/max.png" id="maximizar" alt="Maximizar">
+                <img src="./images/layout/fechar.png" id="fechar" alt="Fechar">
             </div>
+
             <div id="personagem">
                 <img id="personagem-base">
                 <div class="atualiza">
@@ -32,16 +36,16 @@
 
             </div>
 
-            <div id="menu" style="display: none;">
-                
-                <img class="interfacenova" src="images/layout/inferface.png"  />
+            <div id="menu">
+
+                <img class="interfacenova" src="images/layout/inferface.png" />
 
                 <img src="./images/layout/blusa.png" id="blusaroupa" onclick="selecionarCategoria('blusa')">
                 <img src="./images/layout/calca.png" id="calcaroupa" onclick="selecionarCategoria('calca')">
                 <img src="./images/layout/chapeu.png" id="chapeuroupa" onclick="selecionarCategoria('acessorio')">
 
             </div>
-            <div id="opcoes-itens" style="display: none;">
+            <div id="opcoes-itens">
                 <!-- Aqui aparecem as opções -->
             </div>
 
@@ -51,19 +55,7 @@
     </header>
 
 
-    <script>
-        const startBtn = document.getElementById('start-btn');
-        const telaInicial = document.getElementById('tela-inicial');
-        const menuJogo = document.getElementById('menu');
-        const opcaoItens = document.getElementById('opcoes-itens');
-
-        startBtn.addEventListener('click', () => {
-            telaInicial.style.display = 'none';
-            menu.style.display = 'flex';
-            opcaoItens.style.display = 'flex';
-        });
-    </script>
-    <script src="script.js"></script>
+    <script src="./js/renderer.js"></script>
 
 </body>
 
